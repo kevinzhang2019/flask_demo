@@ -1,11 +1,18 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    return "hello world"
+    title = "web app"
+    sentences = [
+        "sentence 1",
+        "sentence 2",
+        "sentence 3",
+        "sentence 4"
+    ]
+    return render_template("index.html", title=title, data=sentences)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+    <title> {{title}} </title>
+    {% else %}
+    <title>Home Page</title>
+    {%endif%}
+</head>
+<body>
+
+{% include "navigate_bar.html" %}
+
+{%block content1%}
+<p>Parent template</p>
+{%endblock%}
+
+</body>
+</html>
